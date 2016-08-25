@@ -50,6 +50,12 @@
     return NSHomeDirectory();
 }
 
+//获取Library目录
+- (NSString*)ps_GetLibraryDirectory
+{
+    return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
+}
+
 //获取Caches目录路径
 - (NSString*)ps_GetCachesDirectory
 {
@@ -59,7 +65,7 @@
 // 获取documents  下路径
 - (NSString*)ps_GetDocumentDirectory
 {
-    return [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) firstObject];
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
 }
 
 // 获取temp 目录路径
@@ -130,18 +136,18 @@
 - (NSUInteger)ps_GetAllFileSizeWithPath:(NSString *)path
 {
     if (![self ps_FileExistsAtPath:path]) return 0;
-
-    __block NSUInteger size = 0;
     
-    dispatch_async(self.fmQueue, ^{
+    __block NSUInteger size = 0;
+    dispatch_sync(self.fmQueue, ^{
         
-        NSDirectoryEnumerator *fileEnumerator = [_fm enumeratorAtPath:path];
-        for (NSString *fileName in fileEnumerator)
-        {
+        NSDirectoryEnumerator *fileEnumerator = [self->_fm enumeratorAtPath:path];
+        
+        for (NSString *fileName in fileEnumerator) {
             NSString *filePath = [path stringByAppendingPathComponent:fileName];
-            NSDictionary *attrs = [_fm attributesOfItemAtPath:filePath error:nil];
+            NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
             size += [attrs fileSize];
         }
+        
     });
     return size;
 }

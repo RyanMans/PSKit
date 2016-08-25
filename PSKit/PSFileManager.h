@@ -11,6 +11,9 @@
 #define _API_UNAVAILABLE(INFO)    __attribute__((unavailable(INFO)))
 
 NS_ASSUME_NONNULL_BEGIN
+
+#define PSFileManagerInstance   [PSFileManager shareInstance]
+
 @interface PSFileManager : NSObject
 
 /**
@@ -37,6 +40,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString*)ps_GetHomeDirectory;
 
 /**
+ *  获取Library目录 NSLibraryDirectory
+ *
+ *  @return
+ */
+- (NSString*)ps_GetLibraryDirectory;
+
+/**
  *   获取Caches目录路径 NSCachesDirectory[0]
  *
  *  @return 
@@ -51,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString*)ps_GetDocumentDirectory;
 
 /**
- *  获取temp 目录路径  NSTemporaryDirectory()
+ *  获取temp 目录路径  NSTemporaryDirectory()(会多 ‘／’，系统自带)
  *
  *  @return
  */
