@@ -2,8 +2,8 @@
 //  PSKitTests.m
 //  PSKitTests
 //
-//  Created by Ryan_Man on 16/8/25.
-//  Copyright © 2016年 Ryan_Man. All rights reserved.
+//  Created by RyanMans on 2017/8/4.
+//  Copyright © 2017年 P.S. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
