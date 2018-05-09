@@ -11,9 +11,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Method
  
-常见的文件管理方法, 包含文件操作:复制、移动、删除、存储等等 
+ 消息处理中心 : XKMsgCenter 
 
-![](images/file.png)
+![](images/msgcenter.png)
+
+常见的GCD 方法封装:
+
+![](images/gcd.png)
 
 
 ## Installation
