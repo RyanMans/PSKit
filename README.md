@@ -1,4 +1,4 @@
-###一. Xcode制作framework流程
+### Xcode制作framework流程
 
 ```
 在日程项目开发中可以使用用framework打包的静态库能够包含图片、xib等资源。
