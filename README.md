@@ -1,3 +1,30 @@
+# XKKit
+
+[![CI Status](http://img.shields.io/travis/ALLen、LAS/XKKit.svg?style=flat)](https://travis-ci.org/ALLen、LAS/XKKit)
+[![Version](https://img.shields.io/cocoapods/v/XKKit.svg?style=flat)](http://cocoapods.org/pods/XKKit)
+[![License](https://img.shields.io/cocoapods/l/XKKit.svg?style=flat)](http://cocoapods.org/pods/XKKit)
+[![Platform](https://img.shields.io/cocoapods/p/XKKit.svg?style=flat)](http://cocoapods.org/pods/XKKit)
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Method
+ 
+常见的文件管理方法, 包含文件操作:复制、移动、删除、存储等等 
+
+![](images/file.png)
+
+
+## Installation
+
+XKKit is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'XKKit'
+```
+
 ### Xcode制作framework流程
 
 ```
@@ -104,4 +131,13 @@ fi
 * 在头文件中添加需要的库的头文件
 
 	![](images/23.png)
+    
+    
+    ## Author
+    
+    ALLen、LAS, 1696186412@qq.com
+    
+    ## License
+    
+    XKKit is available under the MIT license. See the LICENSE file for more info.
 

@@ -8,14 +8,18 @@
 
 Pod::Spec.new do |s|
 
-s.name         = "XKKit"
-s.version      = "0.0.2"
-s.summary      = "静态库XKKit - 消息中心、GCD方法封装"
-s.homepage     = "https://github.com/RyanMans/XKKit"
-s.license          = { :type => 'MIT', :file => 'LICENSE' }
-s.author           = { 'ALLen、LAS' => '1696186412@qq.com' }
-s.source           = { :git => 'https://github.com/RyanMans/XKKit.git', :tag => s.version.to_s }
-
+   s.name         = "XKKit"
+   s.version      = "0.0.3"
+   s.summary      = "静态库XKKit - 消息中心、GCD方法封装"
+   s.homepage     = "https://github.com/RyanMans/XKKit"
+   s.license          = { :type => 'MIT', :file => 'LICENSE' }
+   s.author           = { 'ALLen、LAS' => '1696186412@qq.com' }
+   s.source           = { :git => 'https://github.com/RyanMans/XKKit.git', :tag => s.version.to_s }
+   s.source_files = 'XKKit/Classes/**/*'
+#s.ios.vendored_frameworks = 'Products/*.framework'
    s.ios.deployment_target = '8.0'
-  s.source_files = 'XKKit/Classes/**/*'
+   s.ios.vendored_frameworks = 'XKKit/Classes/XKKit.framework'
+
+
+
 end
